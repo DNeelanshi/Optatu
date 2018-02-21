@@ -1,0 +1,120 @@
+page-home {
+/*    .header .main{
+        position: relative;
+
+        .icon{
+            position: absolute;
+            top: 3px;
+            bottom: 0;
+            margin: auto;
+            right: 16px;
+            height: fit-content;
+
+            img{
+                width: 17px;
+            }
+        }
+    }*/
+
+.search-sec{
+    width: 100%;
+    float: left;
+    position: relative;
+}
+ .searchbar-input{
+        background-color: #f2f2f2 !important;
+        height: 38px !important;
+        font-size: 12px !important;
+    }
+    .searchbar-search-icon{
+        top: 12px !important;
+    }
+    .list.suggestion{
+        background-color: #fff;
+        position: absolute;
+        top: 40px;
+        width: calc(100% - 4px);
+        z-index: 9999;
+        left: 0;
+        right: 0;
+        margin: auto !important;
+    }
+    button.searchbar-clear-icon.disable-hover{
+        width: 25px;
+        right: 27px;
+    }
+    .outersearch {
+        width: 100%;
+        float: left;
+        position: relative;
+    }
+    .outersearch .loc-img{
+        position: absolute;
+        right: 8px;
+        top: 0;
+        width: 15px;
+        bottom: 0;
+        margin: auto;
+        height: 15px;
+    }
+
+   
+    .cat_list .item {
+        padding: 0;
+        margin-bottom: 10px;
+    }
+    .cat_list .item-inner {
+        padding: 0 !important;
+    }
+    .cat_list .item-inner .label {
+        margin: 0 !important;
+    }
+    .categories_box {
+        background: #f2f2f2;
+        padding: 15px;
+        text-align: center;
+        border-radius: 10px;
+        height: 90px;
+    }
+    .hotal{
+        background: url(../assets/img/hotal.jpg) no-repeat top center;
+        background-size: cover;
+    }
+    .restaurant{
+        background: url(../assets/img/restaurant.jpg) no-repeat top center;
+        background-size: cover;
+    }
+    .beaches{
+        background: url(../assets/img/beaches.jpg) no-repeat top center;
+        background-size: cover;
+    }
+    .parking{
+        background: url(../assets/img/parking.jpg) no-repeat top center;
+        background-size: cover;
+    }
+    .entertainment{
+        background: url(../assets/img/entertainment.jpg) no-repeat top center;
+        background-size: cover;
+    }
+
+
+    .categories_box h1 {
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: 2px;
+        font-size: 15px;
+        width: 100%;
+        float: left;
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    }
+    .categories_box img {
+        filter: drop-shadow(0 0 8px rgba(0,0,0,0.6));
+    }
+    .searchbar-input{
+        font-size: 13px !important;
+        font-family: roboto;
+        font-weight: 700 !important;
+    }
+    
+}

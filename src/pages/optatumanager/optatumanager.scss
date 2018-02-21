@@ -1,0 +1,101 @@
+page-optatumanager {
+    .content-sec{
+        padding: 18px;
+        width: 100%;
+        float:left;
+    }
+    .content{
+        background-color: #f2f2f2;
+    }
+   
+
+    .page-signin .input-wrapper { 
+        font-family: "roboto";
+        font-weight: 500;
+        font-size: 12px;
+        color: #fff;
+        margin-top: 0px;
+}
+    .form-sec {
+        width: 100%;
+        float: center;
+        font-family: "roboto";
+        color: #a6a6a6;
+        font:14px;
+        margin-top: -52px;
+}
+   
+    .sign .item .item-inner{
+        border-bottom: none !important;
+        font-family: roboto;
+        font-size: 13px;
+        font-weight: 500;
+        
+    }
+    .sign .text-input{
+        margin-right: 0;
+        width: 100% !important;
+        font-size: 13px;
+        font-family: roboto;
+        font-weight: 500;
+        color: #000;
+
+    }
+    .sign .item{
+        width: 100%;
+        
+        background-color: #fff;
+        border-radius: 10px;
+        border-bottom: none !important;
+       font-size: 14px;
+       margin: 3px 0px;     
+       font-family: "roboto";
+}
+
+.grid {
+    padding:0 !important; 
+}
+
+   h1 {
+    font-size: 16px;
+    font-family: roboto;
+    font-weight: 700;
+    margin: 0;
+}
+ .rbtn{  
+        font-size: 14px;
+     background: none !important; 
+     margin-bottom: 0 !important; 
+     text-decoration: underline;
+     padding-left: 5px;
+}
+.list{
+    margin: 0px;
+}
+
+.checkbox-ios .checkbox-icon{
+    border-radius: 2px;
+}
+
+
+    .back-button.show-back-button{
+        color:#000;
+}
+
+.item.item-md .checkbox-md {
+    position: static;
+    display: block;
+    margin: 9px 9px 9px 0px;
+}
+.selectedcat{
+    width: 100%;
+    float: left;
+    text-align: left;
+    font-weight: 500;
+    font-size: 14px;
+    margin: 6px 0px;
+}
+.select-icon-inner{
+    margin-top: -2px !important;
+}
+}

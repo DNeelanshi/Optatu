@@ -1,0 +1,114 @@
+<!--
+  Generated template for the PaymentPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>payment</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <div class="text-sec">
+        <h3><span>€ Choose a payment method :</span>
+            <img src="assets/img/visa.png">
+            <img src="assets/img/MasterCard.png">          
+        </h3>
+    </div>
+
+    <div class="creditcart">
+        <ion-grid>
+            <ion-row>
+                <ion-col col-6>
+                    <button class="blankbtn">
+                        <div class="cradit">
+                            <div class="imgsec">
+                                <img src="assets/img/credit.png">
+                            </div>
+                            <h1>Credit Card</h1>
+                        </div>
+                    </button>
+                </ion-col>
+
+                <ion-col col-6 (click)="PaymentViaPaypal()">
+                         <button class="blankbtn">
+                        <div class="paypal">
+                            <div class="imgsec">
+                                <img src="assets/img/paypal.png">
+                            </div>
+                            <h1>Paypal</h1>
+                        </div>
+                    </button>
+                </ion-col>
+
+
+
+
+            </ion-row>
+        </ion-grid>
+    </div>
+    <div class="text-sec">
+        <h3>Accepted credit cards:</h3>
+    </div>
+
+    <div class="content-sec">
+        <div class="form-sec">
+            <form [formGroup]="PaymentForm"  (submit)="Payment(PaymentForm)">
+                <ion-list>
+                    <ion-grid>
+                        <ion-row>
+                            <ion-col col-12>
+                                <ion-item>
+                                    <ion-input type="text" placeholder="Card Number" formControlName="cardnumber" maxLength="16"></ion-input>
+                                </ion-item>
+                                <p *ngIf="!isValid('cardnumber')" style="color: #ff0000;" padding-left class="pwdreq">Invalid card number.</p>
+                            </ion-col>
+                            <ion-col col-12>
+                                <ion-item>
+                                    <ion-input type="text" placeholder="Name On Card" formControlName="cardname"></ion-input>
+                                </ion-item>
+                                <p *ngIf="!isValid('cardname')" style="color: #ff0000;" padding-left class="pwdreq">Invalid card name.</p>
+                            </ion-col>
+                            <div class="text-sec">
+                                <h3>Expiration Date</h3>
+                            </div>
+                            <ion-col col-6>
+                                <ion-item>
+                                    <ion-input type="tel" placeholder="Month" formControlName="month" maxLength="2"></ion-input>
+                                </ion-item>
+                                <p *ngIf="!isValid('month')" style="color: #ff0000;" padding-left class="pwdreq">Invalid month.</p>
+                            </ion-col>
+                            <ion-col col-6>
+                                <ion-item>
+                                    <ion-input type="tel" placeholder="Year" formControlName="year" maxLength="4"></ion-input>
+                                </ion-item>
+                                <p *ngIf="!isValid('year')" style="color: #ff0000;" padding-left class="pwdreq">Invalid year.</p>
+                            </ion-col>
+                            <ion-col col-6>
+                                <ion-item>
+                                    <ion-input type="tel" placeholder="3 digit code" formControlName="cvv" maxLength="4"></ion-input>
+                                </ion-item>
+                                <p *ngIf="!isValid('cvv')" style="color: #ff0000;" padding-left class="pwdreq">Invalid cvv.</p>
+                            </ion-col>
+                            <ion-col col-6>
+                                <div class="imgsec cvv">
+                                    <img src="assets/img/cvv.png">
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                    </ion-grid>
+                </ion-list>  
+                <div class="btn-sec">
+                    <button ion-button full type="submit">SAVE</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+</ion-content>

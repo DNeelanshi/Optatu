@@ -1,0 +1,300 @@
+page-payment {
+
+
+    .content{
+        width: 100%;
+        float: left;
+    }
+    .content .main{
+        width: 100%;
+        float: left;
+            margin-top: 30px;
+    }
+    .content .main .top-sec{
+        width: 100%;
+        float: left;
+        text-align: center;
+        position: relative;
+    }
+    .content .main .top-sec .input-sec{
+        width: 30px;
+        height: 30px;
+        border: 2px solid #fff;
+        box-shadow: 0 0 5px #656565;
+        overflow: hidden;
+        background-color: #000;
+        position:absolute;
+        border-radius: 50%;
+        top: 40px;
+       right: 93px;
+    }
+    .content .main .top-sec .input-sec input{
+        width: 26px;
+    height: 26px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 9;
+    opacity: 0;
+    }
+    .content .main .top-sec .input-sec .icon{
+        position: absolute;
+    top: 5px;
+    right: 5px;
+        color: #fff;
+    }
+
+    .content .main .top-sec .main-img{
+        width: 75px;
+        height: 75px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin: auto;
+
+    }
+    .content .main .top-sec .main-img img{
+        width: 100%;
+
+    }
+    .content .main .top-sec .text-sec{
+        width: 100%;
+        float: left;
+        padding: 0px 22px;
+    }
+    .content .main .top-sec .text-sec h3{
+        width: 100%;
+        float: left;
+        color:#000;
+        font-size: 14px;
+        font-weight: 700;
+        font-family: "roboto";
+        margin-bottom: 2px;
+
+    }
+    .content .main .top-sec .text-sec  h6{
+        width: 100%;
+        float: left;
+        color: #6a6a6a;
+        margin-top: 0px;
+        border-bottom: 2px dotted #b9b9b9;
+        padding-bottom: 20px;
+        font-size: 12px;
+        font-family: "roboto";
+    }
+    .content .main .top-sec .text-sec  h6 .icon{
+            color: #6a6a6a;
+            padding-right: 5px;
+            font-size: 15px;
+            font-family: "roboto";
+    }
+    .content-sec{
+        width: 100%;
+        float: left;
+       
+    }
+    .content-sec .form-sec{
+        width: 100%;
+        float: left;
+    }
+    .content-sec .form-sec .list{
+        width: 100%;
+        float: left;
+        margin: 0px;
+    }
+    .content-sec .form-sec .list .item{
+        width: 100%;
+        float: left;
+        border: 0.55px solid #dddddd;
+        border-radius: 5px;
+        padding-left: 8px;
+        margin-bottom: 8px;
+    }
+    .content-sec .form-sec .list .item .item-inner{
+        width: 100%;
+        float: left;
+        padding-right: 0px;
+        border-bottom: none;
+    }
+    .upper .text-input{
+        text-transform: uppercase;
+    }
+    .content-sec .form-sec .list .item .item-inner .text-input{
+        margin-right: 0px;
+        width: 100%;
+        float:left;
+        margin: 0px;
+        font-size: 12px;
+        font-family: "roboto";
+       
+    }
+    ion-textarea .text-input{
+        height: 70px;
+    
+    }
+    .enter{
+        padding: 5px 0;
+    }
+    .content-sec .form-sec .list .item .input{
+         font-size: 12px;
+         color: #565656;
+         font-weight: 500;  
+         font-family: "roboto";
+    }
+    .content-sec .form-sec .list .item .select{
+        width: 100%;
+        float: left;
+        max-width: 100%;
+        font-size: 12px;
+        font-family: "roboto";
+        padding: 13px 9px 8px 0px;
+         color: #565656;
+    }
+    .btn-sec .button{
+        width: 100%;
+        float: left;
+        background-color: #000;
+        font-weight: 500;
+        font-family: "roboto";
+       margin: auto;
+       border-radius: 0px;
+    }
+    .btn-sec{
+        width: 100%;
+        float: left;
+    }
+    .checkbox-ios-dark .checkbox-checked {
+    border-color: #000;
+    background-color: #000;
+    border-radius: 2px;
+}
+
+
+.rbtn{
+    font-size: 12px;
+    font-family: roboto;
+    font-weight: 300;
+}
+
+
+  .text-sec{
+   
+    color: #484848;
+    width: 100%;
+    float: left;
+    margin-top: 10px;
+    
+ 
+  }
+
+.text-sec h6{
+
+    font-size:12px;
+    font-family: roboto;
+    font-weight: 700;
+}
+.text-sec h3{
+    font-size: 12px;
+    font-family: roboto;
+    font-weight: 700;
+    margin-left: 10px;
+}
+
+.text-sec h3 span {
+    float:  left;
+}
+
+.text-sec h3 img {
+    width: 31px;
+    float:  left;
+    margin: 0 3px 0 5px;
+    border: 1px solid #000;
+}
+.blankbtn {
+    width: 100%;
+    padding: 0;
+    background: none;
+}
+.cradit{
+        width: 100%;
+        float: left;
+        background-color: #80c2ef;
+        text-align: center;
+        padding: 10px;
+        border-radius: 5px;
+        border: 2px solid #80c2ef;
+}
+.cradit.paypal{
+    background: transparent;
+}
+.cradit .imgsec{
+    width: 40px;
+    margin: auto;
+}
+.cradit .imgsec img{
+    width: 100%;
+    float: left;
+}
+.cradit h1{
+    width: 100%;
+    float: left;
+    font-size: 12px;
+    font-weight: 700;
+    margin: 10px 0 0 0;
+}
+
+   .cvv img{
+        height: 47px;
+        float: left;
+        width: 76px !important;
+}
+
+
+
+
+
+
+.cradit {
+	position: relative;
+	background: #fbd505;
+    border: none;
+}
+.cradit:after, .cradit:before {
+	top: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.cradit:after {
+	border-color: rgba(136, 183, 213, 0);
+	border-top-color: #fbd505;
+	border-width: 15px;
+	margin-left: -15px;
+}
+.cradit:before {
+	border-color: rgba(194, 225, 245, 0);
+	border-top-color: #fbd505;
+	border-width: 15px;
+	margin-left: -15px;
+}
+.paypal {
+    border:  2px solid #fbd505;
+    border-radius:  5px;
+    padding: 13px;
+}
+
+.paypal h1 {
+    font-size:  14px;
+    margin: 7px 0 0 0;
+    padding: 0;
+}
+
+.imgsec img {
+    width: 28px;
+}
+
+}

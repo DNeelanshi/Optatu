@@ -1,0 +1,255 @@
+page-createaccunt {
+
+    .content{
+        width: 100%;
+        float: left;
+    }
+    .content .main{
+        width: 100%;
+        float: left;
+            margin-top: 30px;
+    }
+    .content .main .top-sec{
+        width: 100%;
+        float: left;
+        text-align: center;
+        position: relative;
+    }
+    .content .main .top-sec .input-sec{
+        width: 30px;
+        height: 30px;
+        border: 2px solid #fff;
+        box-shadow: 0 0 5px #656565;
+        overflow: hidden;
+        background-color: #000;
+        position:absolute;
+        border-radius: 50%;
+        right: 0px;
+        bottom: 0;
+
+    }
+    .content .main .top-sec .input-sec .upld{
+        width: 100%;
+        float: left;
+        position: relative;
+        height: 100%;
+    }
+    .input-main{
+        position: relative;
+        width: 75px;
+        height: 75px;
+        margin: auto;
+    }
+    .content .main .top-sec .input-sec input{
+        width: 26px;
+    height: 26px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 9;
+    opacity: 0;
+    }
+    .content .main .top-sec .input-sec .icon{
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: #fff;
+        left: 0;
+        bottom: 0;
+        height: fit-content;
+        margin: auto;
+    }
+
+    .content .main .top-sec .main-img{
+        width: 75px;
+        height: 75px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin: auto;
+
+    }
+    .content .main .top-sec .main-img img{
+        width: 100%;
+
+    }
+    .content .main .top-sec .text-sec{
+        width: 100%;
+        float: left;
+            padding: 0px 22px;
+    }
+    .content .main .top-sec .text-sec h3{
+        width: 100%;
+        float: left;
+        color:#000;
+        font-size: 14px;
+        font-weight: 700;
+        font-family: "roboto";
+        margin-bottom: 2px;
+
+    }
+    .content .main .top-sec .text-sec  h6{
+        width: 100%;
+        float: left;
+        color: #6a6a6a;
+        margin-top: 0px;
+        border-bottom: 2px dotted #b9b9b9;
+        padding-bottom: 20px;
+        font-size: 12px;
+        font-family: "roboto";
+    }
+    .content .main .top-sec .text-sec  h6 .icon{
+            color: #6a6a6a;
+            padding-right: 5px;
+            font-size: 15px;
+            font-family: "roboto";
+    }
+    .content-sec{
+        width: 100%;
+        float: left;
+        padding: 14px
+    }
+    .content-sec .form-sec{
+        width: 100%;
+        float: left;
+    }
+    .content-sec .form-sec .list{
+        width: 100%;
+        float: left;
+        margin: 0px;
+    }
+    .content-sec .form-sec .list .item{
+        width: 100%;
+        float: left;
+        border: 0.55px solid #dddddd;
+        border-radius: 5px;
+        padding-left: 8px;
+        margin-bottom: 8px;
+    }
+    .content-sec .form-sec .list .item .item-inner{
+        width: 100%;
+        float: left;
+        padding-right: 0px;
+        border-bottom: none !important;
+    }
+    .upper .text-input{
+        text-transform: uppercase;
+        font-size: 13px;
+        font-family: roboto;
+        font-weight: 500;
+        color: #000;
+
+    }
+    .content-sec .form-sec .list .item .item-inner .text-input{
+        margin-right: 0px;
+        width: 100%;
+        float:left;
+        margin: 0px;
+        font-size: 13px;
+        font-family: "roboto";
+        font-weight: 500;
+       
+    }
+    ion-textarea .text-input{
+        height: 70px;
+    
+    }
+    .enter{
+        padding: 5px 0;
+    }
+    .content-sec .form-sec .list .item .input{
+         font-size: 12px;
+         color: #565656;
+         font-weight: 500;  
+         font-family: "roboto";
+    }
+    .content-sec .form-sec .list .item .select{
+        width: 100%;
+        float: left;
+        max-width: 100%;
+        font-size: 12px;
+        font-family: "roboto";
+        padding: 13px 9px 8px 0px;
+         color: #565656;
+    }
+    .btn-sec .button{
+        width: 100%;
+        float: left;
+        background-color: #000;
+        font-weight: 500;
+        font-family: "roboto";
+       margin: auto;
+       border-radius: 0px;
+    }
+    .btn-sec{
+        width: 100%;
+        float: left;
+    }
+    .checkbox-ios-dark .checkbox-checked {
+    border-color: #000;
+    background-color: #000;
+    border-radius: 2px;
+}
+
+.item.item-md .checkbox-md {
+ 
+    margin: 9px 9px 9px 0px;
+}
+
+.rbtn{
+    font-size: 12px;
+    font-family: roboto;
+    font-weight: 300;
+
+
+}
+.item-inner{
+    font-size: 13px;
+    font-family: roboto;
+    font-weight: 500;
+}
+.viewpass{
+    margin: 0;
+    bottom: 0px;
+    font-size: 22px;
+    position: relative;
+    min-height: auto;
+    right: 4px;
+}
+
+.itemouter {position:  relative;}
+
+.eyebutton {
+    position:  absolute;
+    right: 0;
+    color: #525252;
+}
+ul#strengthBar {
+    line-height: 12px;
+        display:inline;
+        list-style:none;
+        margin:0;
+        margin-left:15px;
+        padding:0;
+        vertical-align:2px;
+    }
+    .point:last {
+        margin:0 !important;
+    }
+    .point {
+        border-radius:2px;
+        display:inline-block;
+        height:5px;
+        margin-right:1px;
+        width:20px;
+    }
+    .strnth{
+        width: 144px;
+        float: left;
+        margin: 0;
+        margin-bottom: 6px;
+    }
+    .col{
+    position: intial !important;
+}
+
+}

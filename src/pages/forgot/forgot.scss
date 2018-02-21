@@ -1,0 +1,89 @@
+page-forgot {
+
+
+	.content-sec{
+		width: 100%;
+		flex: left;
+		padding:30px;
+
+	}
+	.content-sec{
+		width: 100%;
+        float: left;
+
+	}
+	.content-sec .sign .form-sec{
+		width: 100%;
+		float: left;
+	}
+	.content-sec .sign .form-sec .list{
+		width: 100%;
+		float: left;
+		margin-bottom: 0px;
+	}
+	.content-sec .sign .form-sec .list .item{
+		width: 100%;
+		float: left;
+		padding: 0px;
+		border:none;
+	}
+	.content-sec .sign .form-sec .list .item .item-inner{
+		border-bottom: 0.55px solid #c8c7cc;
+		padding: 0px;
+	}
+	.content-sec .sign .form-sec .list .item input{
+		font-size: 13px;
+        margin-top: 0px;
+        font-weight: 500;
+        font-family: "roboto";
+        letter-spacing: 1px;
+	}
+	.content-sec .sign .form-sec .list .item .input .text-input{
+		padding: 0;
+	    margin-right: 0px;
+	    width: 100%;
+	}
+	.content-sec .sign .form-sec .list .item .label{
+		margin-bottom: 0px;
+        margin-top: 20px;
+        color: #a6a6a6;
+        font-weight: 700;
+        font-family: "roboto";
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+	}
+
+	.content-sec .frgtpwd button{
+		width: 100%;
+		float: left;
+		background-color: #000;
+		font-weight: 500;
+        font-family: "roboto";
+        margin: 20px auto;
+	}
+	
+	.main{
+		width: 100%;
+		float: left;
+		text-align: center;
+		padding-top: 10vh;
+
+	}
+
+	.scroll-content{
+	margin-top: 64px;
+    background-color: #f2f2f2;
+	}
+
+	 .item{
+		 background: transparent;
+	 }
+
+	 .bar-button-default-ios, .bar-button-default.bar-button-ios-default, .bar-button-clear-ios-default {
+    color: #000000;
+    background-color: transparent;
+}
+.col{
+    position: intial !important;
+}
+}

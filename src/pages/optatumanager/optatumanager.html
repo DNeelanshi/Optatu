@@ -1,0 +1,225 @@
+<!--
+  Generated template for the OptatumanagerPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Optatu Manager</ion-title>
+  </ion-navbar>
+
+</ion-header>
+<ion-content style="background-color:f2f2f2">
+   <div class="content-sec">
+  <div class="sign">
+   <form [formGroup]="OptatuManagerForm">
+     <ion-grid >
+       
+    <ion-list>
+        <ion-row>
+<ion-col col-12>
+       <ion-item>
+  <ion-label>CATEGORY</ion-label>
+  <ion-select multiple="true" formControlName="category" (ngModelChange)="categorySelect($event)" >
+    <ion-option *ngFor="let cat of category">{{cat.category}}</ion-option>
+  </ion-select>
+</ion-item>
+    <p class="selectedcat" *ngIf="selectedCat">{{selectedCat}}</p>
+    <p *ngIf="!isValid('category')" color="danger" padding-left>Choose at least one category</p>
+</ion-col>
+        </ion-row>
+  <ion-row>
+    <ion-col col-6 style="padding-right: 4px;position: initial;">
+      <ion-item>
+        <ion-input type="text" name="username" placeholder="NAME" formControlName="name"></ion-input>
+      </ion-item>
+        <p *ngIf="!isValid('name')" color="danger" padding-left>Name required.</p>
+      </ion-col>
+    <ion-col col-6  style="padding-left: 4px;position: initial;">
+      <ion-item>
+        <ion-input type="text" name="username" placeholder="LAST NAME" formControlName="surname"></ion-input>
+      </ion-item>
+        <p *ngIf="!isValid('surname')" color="danger" padding-left>Last name required.</p>
+      </ion-col>
+  </ion-row>
+
+        <ion-row>
+<ion-col col-12 style="position: initial;">
+  <ion-item>
+     <ion-input type="text" name="username" placeholder="ACTIVITY NAME" formControlName="activityName"></ion-input>
+      </ion-item>
+    <p *ngIf="!isValid('activityName')" color="danger" padding-left>Activity name required.</p>
+</ion-col>
+        </ion-row>
+        <ion-row>
+<ion-col col-12 style="position: initial;">
+      <ion-item>
+ <ion-input type="text" name="username" placeholder="LOCATION / ACTIVITY ADDRESS" formControlName="activityAddress"></ion-input>
+     </ion-item>
+    <p *ngIf="!isValid('activityAddress')" color="danger" padding-left>Activity address required.</p>
+     </ion-col>
+        </ion-row>
+        <ion-row>
+     <ion-col col-12 style="position: initial;">
+      <ion-item>
+ <ion-input type="tel" name="username" placeholder="POSTAL CODE / CAP" formControlName="postalCode" maxLength="15"></ion-input>
+     </ion-item>
+         <p *ngIf="!isValid('postalCode')" color="danger" padding-left>Postal code required.</p>
+     </ion-col>
+        </ion-row>
+        <ion-row>
+
+  <ion-col col-12 style="position: initial;">
+      <ion-item>
+ <ion-input type="text" name="username" placeholder="PROVINCE " formControlName="province"></ion-input>
+     </ion-item>
+      <p *ngIf="!isValid('province')" color="danger" padding-left>Province required.</p>
+     </ion-col>
+        </ion-row>
+        <ion-row>
+    <ion-col col-12 style="position: initial;">
+      <ion-item>
+ <ion-input type="text" name="username" placeholder="CITY" formControlName="city"></ion-input>
+     </ion-item>
+         <p *ngIf="!isValid('city')" color="danger" padding-left>City required.</p>
+     </ion-col>
+        </ion-row>
+        <ion-row>
+     <ion-col col-12 style="position: initial;">
+      <ion-item>
+ <ion-input type="tel" name="username" placeholder="TELEPHONE" formControlName="phone" maxLength="15"></ion-input>
+     </ion-item>
+<!--          <p *ngIf="!isValid('phone')" color="danger" padding-left>Phone required.</p>-->
+     </ion-col>
+        </ion-row>
+        <ion-row>
+     <ion-col col-12 style="position: initial;">
+      <ion-item>
+ <ion-input type="email" name="username" placeholder="EMAIL" formControlName="email"></ion-input>
+     </ion-item>
+        <p *ngIf="!isValid('email')" color="danger" padding-left>Invalid email</p>
+     </ion-col>
+        </ion-row>
+        <ion-row>
+        <ion-col col-12 style="position: initial;">
+      <ion-item>
+ <ion-input type="password" name="password" placeholder="PASSWORD" formControlName="password"></ion-input>
+     </ion-item>
+        <p *ngIf="!isValid('password')" color="danger" padding-left>Password required.</p>
+     </ion-col>
+        </ion-row>
+        <ion-row>
+     <ion-col col-12 style="position: initial;">
+ <h1>BILLING INVOICE</h1>
+     </ion-col>
+        </ion-row>
+        <ion-row>
+      <ion-col col-12 style="position: initial;">
+      <ion-item>
+ <ion-input type="text" name="username" placeholder="COMPANY NAME" formControlName="companyName"></ion-input>
+     </ion-item>
+          <p *ngIf="!isValid('companyName')" color="danger" padding-left>Company name required.</p>
+     </ion-col>
+        </ion-row>
+        <ion-row>
+        <ion-col col-12 style="position: initial;">
+      <ion-item>
+ <ion-input type="tel" name="username" placeholder="VAT NUMBER / FISCAL CODE" formControlName="vatNumber" maxLength="15"></ion-input>
+     </ion-item>
+          <p *ngIf="!isValid('vatNumber')" color="danger" padding-left>Vat number required.</p>
+     </ion-col>
+        </ion-row>
+        <ion-row>
+        <ion-col col-12 style="position: initial;">
+      <ion-item>
+ <ion-input type="text" name="username" placeholder="BILLING ADDRESS" formControlName="billingAddress"></ion-input>
+     </ion-item>
+            <p *ngIf="!isValid('billingAddress')" color="danger" padding-left>Billing address required.</p>
+     </ion-col>
+        </ion-row>
+        <ion-row>
+        <ion-col col-12 style="position: initial;">
+      <ion-item>
+ <ion-input type="text" name="username" placeholder="PROVINCE" formControlName="billingProvince"></ion-input>
+     </ion-item>
+            <p *ngIf="!isValid('billingProvince')" color="danger" padding-left>Billing province required.</p>
+     </ion-col>
+        </ion-row>
+        <ion-row>
+        <ion-col col-12 style="position: initial;">
+      <ion-item>
+ <ion-input type="text" name="username" placeholder="CITY" formControlName="billingCity"></ion-input>
+     </ion-item>
+        <p *ngIf="!isValid('billingCity')" color="danger" padding-left>Billing city required.</p>
+     </ion-col>
+        </ion-row>
+        <ion-row>
+        <ion-col col-12 style="position: initial;">
+      <ion-item>
+ <ion-input type="text" name="username" placeholder="NATION" formControlName="billingNation"></ion-input>
+     </ion-item>
+        <p *ngIf="!isValid('billingNation')" color="danger" padding-left>Billing nation required.</p>
+     </ion-col>
+        </ion-row>
+        <ion-row>
+        <ion-col col-12 style="position: initial;">
+      <ion-item>
+ <ion-input type="text" name="username" placeholder="IBAN" formControlName="iban"></ion-input>
+     </ion-item>
+            <p *ngIf="!isValid('iban')" color="danger" padding-left>IBAN required.</p>
+     </ion-col>
+        </ion-row>
+  <ion-row>
+    <ion-col col-6 style="padding-right: 4px;position: initial;">
+      <ion-item>
+        <ion-input type="text" name="username" placeholder="IBAN NAME" formControlName="ibanName"></ion-input>
+      </ion-item>
+        <p *ngIf="!isValid('ibanName')" color="danger" padding-left>IBAN name required.</p>
+      </ion-col>
+    <ion-col col-6 style="padding-left: 4px;position: initial;">
+      <ion-item>
+        <ion-input type="email" name="username" placeholder="IBAN LAST NAME" formControlName="ibanSurname"></ion-input>
+      </ion-item>
+        <p *ngIf="!isValid('ibanSurname')" color="danger" padding-left>IBAN lastname required.</p>
+      </ion-col>
+  </ion-row>
+        <ion-row>
+ <ion-col col-12 style="position: initial;">
+      <ion-item>
+ <ion-input type="email" name="username" placeholder="PAYPAL EMAIL" formControlName="paypalemail"></ion-input>
+     </ion-item>
+      <p *ngIf="!isValid('paypalemail')" color="danger" padding-left>Paypal email required.</p>
+     </ion-col>
+        </ion-row>
+     
+      </ion-list>
+     </ion-grid>
+
+     <ion-item class="rbtn">
+  <ion-label>LEGAL REFERENCE CONFIRM</ion-label>
+  <ion-checkbox color="dark" formControlName="legal"></ion-checkbox>
+</ion-item>
+
+    <ion-item class="rbtn">
+  <ion-label>OPTATU SERVICE TERMS & CONDITIONS</ion-label>
+  <ion-checkbox color="dark" formControlName="terms"></ion-checkbox>
+</ion-item>
+
+    <ion-item class="rbtn" style="background:none">
+  <ion-label>PRIVACY </ion-label>
+  <ion-checkbox color="dark" formControlName="privacy"></ion-checkbox>
+</ion-item>
+  <div class="btn-sec">
+   <button ion-button full class="custom_btn" type="submit" color="dark"  (click)="OptatuManager(OptatuManagerForm)" [disabled]="!OptatuManagerForm.valid">REGISTER</button>
+   </div>
+
+  </form>
+ 
+ </div>
+</div>
+
+</ion-content>
+
+

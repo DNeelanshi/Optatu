@@ -1,0 +1,296 @@
+page-signin {
+ .image2{ 
+  background: url('../assets/img/signin_img.png') no-repeat top center;
+  background-size: cover;
+}
+fwdreq{
+    width: 100%;
+    float: left;
+   margin: 10px 0px;
+}
+    
+    .logo2 {display: block;
+    margin: 0 auto;
+    height: 100px;
+    width: 100px;
+    padding: 4px;
+    margin-top: 30px;
+}
+    
+
+    .skip{
+       text-align: right;
+    padding-top: 20px;
+    padding-right: 19px;
+    color: #000;
+        
+        // cursor: crosshair; 
+        // position: absolute; 
+        // float: right;
+        // top: 0px; 
+        // width: 200px; 
+        // height: 100px;
+    }
+    .skip .button{
+        padding: 0;
+        margin: 0;
+        color: #000;
+        height: 24px;
+        
+        .button-inner{
+            font-size: 18px;
+        }
+    }
+
+    .text {
+        margin-top: -177px;
+        margin-left: 16px;
+        color: white;
+        font-size:xx-small;
+    }
+    .text h6 {
+        margin-left: 0px;
+        color: white;
+        font-size: 13px;
+        margin-top: 0px;
+    }
+    .content-sec{
+        margin-top: 30px;
+        padding: 18px;
+        width: 100%;
+        float:left;
+    }
+    .text-sec{    
+        text-align: center;
+        margin-top: 30px;
+        font-family: "roboto";
+        font-size: 12px;
+        font-weight: 500;
+   
+}
+.text-sec h2 {
+       font-size: 14px;
+       font-family: "roboto";
+       font-weight: 700;
+}
+    .text-sec h3 {    
+      text-align: center;
+    margin-top: 50px;
+    font-family: roboto;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0px;
+    color: #000;
+}
+   
+    .page-signin .input-wrapper { 
+        font-family: "roboto";
+        font-weight: 500;
+        font-size: 12px;
+        color: #fff;
+        margin-top: 0px;
+}
+        .sign {    
+        text-align: center;
+        margin-top: 50px;
+        font-size: 12px;
+        margin: 0px;
+        color:DarkGrey;
+       font-family: "roboto";
+        font-weight: 500;
+        color: #a6a6a6;
+}
+    .form-sec {
+        width: 100%;
+        float: center;
+        font-family: "roboto";
+        color: #a6a6a6;
+        font:14px;
+        margin-top: -52px;
+}
+    .sign .item{
+        width: 100%;
+        float: left;
+        background-color: #fff;
+        border-radius: 10px;
+        border-bottom: none;
+        margin: 10px 0px;
+}
+    .sign .item .item-inner{
+        border-bottom: none !important;
+        
+    }
+    .sign .text-input{
+        margin-right: 0;
+        width: 100% !important;
+        font-size: 13px;
+        font-family: roboto;
+        font-weight: 500;
+        color: #000;
+
+    }
+    .forgtpwd h1 {
+        font-size: 12px;
+        font-family: "roboto";
+        font-weight: 700;
+        text-align: right;
+        color: #000;
+        margin-right: 0px;
+        margin-bottom: 34px;
+        margin-top: 15px;
+        //width: 100%;
+        float: right; 
+    }
+
+.btn-sec .button {
+        border-radius: 4px;
+        height: 2.8em;
+        font-size: 1.6rem;
+        color: #fff;
+        width: 100%;
+        float: left;
+        margin: 0;    
+}
+/*.btn-sec .button.activated{
+    background-color: #3f4400;
+
+}*/
+
+.btn-sec .button.whitetext {
+    color:#000;
+
+}
+.btn-sec .button.whitetext.activated {
+    background-color: #a5a900;
+}
+
+    .span.button-inner{    
+        font-size: 14px;
+        font-family: "robot";
+        font-weight: 500;
+}
+    .register {
+       font-size: 14px;
+       font-family: "robot";
+        font-weight: 700;
+        text-align: center;
+        color: #fff;
+        width: 100%;
+        float: left;
+        padding-bottom: 20px;
+}
+    .register span {
+        font-size: 14px;
+        text-align: center;
+        color:#000000;
+        font-family: "roboto";
+}
+   .tn-sbec {    
+        width: 100%;
+        text-align: center;
+        float: left;
+}
+    .registerlast {
+        width: 100%;
+        float: left;
+        
+}
+
+    .list> .item-block:last-child .item-inner {
+        border-bottom: 0.55px solid #c8c7cc;
+        width: 100%;
+}
+    .forgtpwd{
+        margin-top: 20px;
+        font-family: "roboto";
+}
+
+
+
+    .sign .form-sec .item .input{
+         color:#000;
+}
+.item .label{
+    color:#000 !important;
+}
+
+.button-inner {
+        font-size: 14px;
+    font-weight: 700;
+   font-family: "roboto";
+}
+
+
+.top-img{
+    width: 100%;
+}
+
+.btn-sec{
+
+    float: left;
+    width: 100%;
+    padding-bottom: 30px;
+}
+
+h2::before,
+h2::after {
+    display: inline-block;
+    content: "";
+    border-top: .3rem solid black;
+   width: 38%;
+    margin: 0 1rem;
+    transform: translateY(-1rem);
+
+}
+h2 img{
+    width: 25px;
+}
+.btn-sec.line h2{
+    width: 100%;
+    float: left;
+    margin: 0;
+    margin-bottom: 30px;
+    line-height: 19px;
+}
+
+.btn-sec.line{
+    padding-bottom: 0;
+}
+.viewpass{
+    margin: 0;
+    bottom: 0px;
+    font-size: 22px;
+    position: relative;
+    min-height: auto;
+    right: 4px;
+}
+.itemouter {
+    position:  relative;
+    float: left;
+    width: 100%;
+}
+
+.eyebutton {
+    position:  absolute;
+    right: 0;
+    color: #525252;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.pwdreq{
+    width: 100%;
+    float: left;
+    margin: 0;
+}
+.col{
+    position: intial !important;
+}
+.alert-md .alert-title {
+    font-size: 16px !important;
+}
+
+}
+.popuptxt h2 {
+    font-size: 16px !important;
+}

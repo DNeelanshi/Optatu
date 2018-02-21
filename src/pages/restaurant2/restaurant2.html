@@ -1,0 +1,131 @@
+<!--
+  Generated template for the Restaurant2Page page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="white">
+    <button ion-button menuToggle>
+      <ion-icon name="menus"></ion-icon>
+    </button>
+    <ion-title> <span class="maintitle"> Reserve now </span> <span class="subtitle">Thurs 2 july 9:2:55</span></ion-title>
+    <ion-buttons end (click)="notification()">
+      <button ion-button icon-only>
+        <ion-icon name="notifications-outline"><span class="noti_counter">0</span></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-buttons end (click)="PopoverModal()">
+      <button ion-button icon-only>
+        <ion-icon name="more"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content style="background:#f9f9f9;">
+  <div class="search_filter">
+    <ion-list>
+    <form>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-12>
+            <!--ion-searchbar placeholder="WHERE (CITY, ADDRESS) " (ionInput)="getItems()"></ion-searchbar-->
+
+           <label class="item item-input inputwidicon">
+    
+    <ion-input type="search" placeholder="WHERE (CITY, ADDRESS) " class="abcd"></ion-input>
+    <!--<ion-icon name="arrow-forward" item-right primary></ion-icon>-->
+           </label>
+
+
+          </ion-col>
+
+          <ion-col col-12>
+       <label class="item item-input inputwidicon">
+    
+    <ion-input type="search" placeholder="BARBECUE NATION" class="jj"></ion-input>
+    <!--<ion-icon name="arrow-forward" item-right primary></ion-icon>-->
+           </label>
+          </ion-col>
+          
+
+
+
+          <ion-col col-12>
+            <ion-item>
+               <ion-icon  item-start class="calender"><img src="assets/img/date_calendar.png"></ion-icon>
+              <ion-label class="cdate" style="position:static; width:15%">Date</ion-label>
+              <ion-input type="date" class="sdate"></ion-input>
+            </ion-item>
+          </ion-col>
+
+          <ion-col col-6>
+            
+            <ion-item>
+              <ion-icon  item-start class="calender"><img src="assets/img/time.png"></ion-icon>
+              <ion-label class="cdate" style="position:static; width:15%">Time</ion-label>
+            <ion-datetime displayFormat="h:mm A"></ion-datetime>
+        </ion-item>
+          </ion-col>
+          <ion-col col-6>
+            <ion-item>
+               <ion-icon  item-start class="calender"><img src="assets/img/table.png"></ion-icon>
+                    <ion-label class="cdate" style="position:static; width:30%">Table Seats</ion-label>
+              <ion-datetime displayFormat="mm" class="sdate" style="width: 19%;">Table Seats</ion-datetime>
+            </ion-item>
+          </ion-col>
+          
+          <ion-col col-12>
+            <button full class="btn" (click)="presentMapPage()">SEarch</button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </form>
+    </ion-list>
+  </div>
+
+
+<div class="list_item">
+  <h2 class="product_title">TOP RESTAURANTS</h2>
+<ion-list no-lines>
+  <ion-item>
+    <div class="thumb"  item-start>
+       <img src="assets/img/r1.jpg">
+    </div>
+
+    <h2>Barbeque Nation</h2>
+    <p class="categories_sub">RESTAURANTS</p>
+    <p>Distance : 350m</p>
+    <p>Address : Dongi Garadgi, Gaji</p>
+    <p class="type">Type : 
+      <button ion-button small color="yellow" class="btn_new">Sushi</button> 
+      <button ion-button small  class="btn_new">Bio</button>
+    
+    </p>
+    <button ion-button small class="btn_new"(click)="presentMapPage()">Reserve</button>
+    <button ion-button small class="btn_new" (click)="MaplistfullModal()">MAP VIEW</button>
+
+  </ion-item>
+  <ion-item>
+    <div class="thumb"  item-start>
+       <img src="assets/img/r1.jpg">
+    </div>
+    <h2>Barbeque Nation</h2>
+    <p class="categories_sub">RESTAURANTS</p>
+    <p>Distance : 350m</p>
+    <p>Address : Dongi Garadgi, Gaji</p>
+    <p class="type">Type : 
+      <button ion-button small color="yellow" class="btn_new">Sushi</button> 
+      <button ion-button small  class="btn_new">Bio</button>
+    </p>
+    <button ion-button small class="btn_new" (click)="barbequenationModal()">Reserve</button>
+    <button ion-button small class="btn_new">MAP VIEW</button>
+
+  </ion-item>
+</ion-list>
+</div>
+</ion-content>
+

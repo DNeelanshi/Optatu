@@ -1,0 +1,343 @@
+page-restaurants {
+button.btn.activated {
+    background-color: #525102;
+}
+.Yellow{
+    background-color: #fbd506;
+    color:#000;
+}
+.blue{
+    background-color: #488aff;
+}
+   .customclass5454 .picker-wrapper {
+    top: 0 !important;
+    width: 85%;
+    border-radius: 10px;
+    height: 200px !important;
+}
+    .calendarcls .popover-content{
+        position: absolute;
+    top: 0 !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    height: fit-content;
+    margin: auto;
+    width: 90% !important;
+     }
+    ion-searchbar{
+        padding: 0px !important;
+    }
+
+    .searchbar-input{
+        background-color: #fff !important;
+        height: 38px !important;
+        font-size: 12px !important;
+        border-radius: 5px !important;
+        box-shadow: none !important;
+    }
+    .searchbar-search-icon{
+        top: 12px !important;
+    }
+    .list.suggestion{
+        background-color: #fff;
+        position: absolute;
+        top: 40px;
+        width: calc(100% - 4px);
+        z-index: 9999;
+        left: 0;
+        right: 0;
+        margin: auto !important;
+    }
+    button.searchbar-clear-icon.disable-hover{
+        width: 25px;
+        right: 27px;
+    }
+    .outersearch {
+        width: 100%;
+        float: left;
+        position: relative;
+    }
+    .outersearch .loc-img{
+        position: absolute;
+        right: 8px;
+        top: 0;
+        width: 15px;
+        bottom: 0;
+        margin: auto;
+        height: 15px;
+    }
+.calender{
+   line-height: 28px;
+    margin: 0 !important;
+    font-size: 18px;
+   
+}
+.calender img{
+    width: 12px;
+}
+
+ion-datetime{
+    // width: 85%;
+    font-weight: 500;
+    font-size: 11px;
+    padding: 0 !important;
+    width: 63%; 
+
+    .datetime-text{
+       line-height: 15px;
+       font-size: 13px;
+       color: #484848;
+    }
+}
+
+    .cdate{
+    WIDTH: 17%;
+    FLOAT: right;
+    position: unset;
+    color: #000;
+    /* font-weight: bold; */
+    font-weight: normal;
+    font-size: 13px;
+    color: #484848;
+}
+
+.text-input{
+        margin: 0 !important;
+    font-size: 12px;
+    font-weight: 500;
+    color: #333;
+   
+}
+.sdate .text-input{
+ line-height: 11px !important;
+}
+.searchinput .text-input {
+    padding: 12px;
+    background: #fff;
+    border-radius: 5px;
+    width: 100%;
+}
+.searchheader .item {
+    padding-left: 5px;
+    border:none;
+    border-radius: 5px;
+     min-height: 38px;
+     height: 38px;
+}
+.searchheader .item-inner {
+    border:none !important;
+    margin-left: 0 !important;
+}
+.searchheader .select-text {
+    font-size: 13px;
+    margin-right: 5px;
+}
+
+.searchheader .select-icon-inner{
+    top: 15px !important;
+}
+
+}
+
+    .searchbar{
+        background: none;
+        margin: 0;
+        padding: 0;
+        min-height:auto;
+        box-shadow: none;
+    }
+    .search_filter {
+        background: #fbd505;
+        padding: 5px;
+        float: left;
+        width: 100%;
+    }
+    .search_filter .list {
+        margin: 0 !important;
+    }
+    .search_filter .input-wrapper{
+        height: 24px;
+        padding-top: 8px;
+    }
+    .search_filter .item{
+        border-radius: 5px !important;
+        padding: 5px 8px;
+        height: 38px;
+    }
+    .search_filter input{
+        margin: 0 !important;
+        font-size: 12px;
+        font-weight: 500;
+        color: #333;
+        line-height: 8px !important;
+    }
+
+     .search_filter .text-input{
+        line-height: 23px !important;
+    }
+    .search_filter .item-block{
+        min-height:2rem !important;
+    }
+    .search_filter .item-inner{
+        border: none !important;
+        padding-right: 0 !important;
+    }
+    .search_filter .label{
+       margin:0;
+       color: #858585;
+       text-transform: uppercase;
+       font-weight: 500;
+       letter-spacing: 1px;
+       font-size: 10px;
+        position: absolute;
+        top: 5px;
+        left: 8px;
+        width: 100%;
+    }
+    .search_filter .select{
+        margin: 0 !important;
+        font-size: 12px;
+        font-weight: 500;
+        color: #333;
+        padding: 4px 8px 1px 0 !important;
+    }
+    .select-icon-inner{
+    
+    }
+
+
+    /*--------------------list item-------------------------*/
+
+    .thumb {
+        width: 90px;
+        border-radius: 5px !important;
+        position: relative;
+        overflow: hidden;
+        height: 91px;
+    }
+    .thumb img {
+        height: 100%;
+        width: auto;
+        min-width: inherit;
+        margin: auto;
+        position: absolute;
+        left: -50%;
+        right: -50%;
+        bottom: 0;
+        top: 0;
+        max-width: inherit;
+    }
+    .list_item {
+        float: left;
+        width: 100%;
+        padding: 15px;
+    }
+    .list_item .item {
+        border-radius: 6px;
+        padding-left: 8px;
+        margin-bottom: 15px;
+        box-shadow: 0 0 15px #ccc;
+        align-items: inherit !important;
+    }
+    .list_item h2{
+        color: #484848;
+        font-size: 13px;
+        letter-spacing: 1.5px;
+        font-weight: 600 !important;
+        font-family: Josefin Sans;
+        text-transform: uppercase;
+    }
+    .categories_sub{
+        color: #a1a0a0 !important;
+        font-size: 9px;
+        letter-spacing: 1.5px;
+        font-weight: 600 !important;
+        font-family: Josefin Sans;
+        text-transform: uppercase;
+    }
+    .list_item p {
+        font-size: 11px;
+        color: #484848;
+        white-space: normal;
+    }
+    .btn_new {
+        height: 17px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 9px;
+        margin: 0 5px 5px 0px;
+        line-height: 17px;
+    }
+       .inputwidicon {
+    border-radius: 5px !important;
+    padding: 8px 8px !important;
+    background: #fff;
+  }
+    ion-input.abcd:after {
+    content: "hi";
+    background: url(../../assets/img/interactive_map.png);
+    position: absolute;
+    right: 10px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background-size: 12px;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: rgba(0,0,0,0)
+}
+input{
+        padding-right: 10px;
+            font-size: 13px;
+}
+
+.picker-wrapper {
+    top: 0 !important;
+    width: 85%;
+    border-radius: 10px;
+    height: 200px !important;
+    
+    .picker-toolbar {
+        display: flex !important;
+        height: 44px !important;
+        border-bottom: 0.55px solid #c8c7cc !important;
+        background: #fff;
+        
+        .picker-toolbar-button.picker-toolbar-cancel{
+            text-align: start !important;
+            flex: 1 !important;
+             
+            button{
+                font-size: 1.6rem !important;
+                text-transform: capitalize !important;
+                font-weight: normal !important
+            }
+        }
+        .picker-toolbar-button{
+             text-align: end !important;
+             flex: 1 !important;
+        }
+        button{
+                font-size: 1.6rem !important;
+                text-transform: capitalize !important;
+                font-weight: 600 !important
+            }
+    }
+    .picker-above-highlight{
+        border-bottom: 1px solid #c8c7cc !important;
+        display: block;
+    }
+    .picker-below-highlight{
+         border-top: 1px solid #c8c7cc !important;
+         display: block;
+    }
+    .picker-opt-selected{
+        color: #000 !important;
+    }
+}
+
+
+
+
+

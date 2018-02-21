@@ -1,0 +1,73 @@
+<!--
+  Generated template for the MaplistPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+
+<ion-header>
+    <ion-navbar color="white">
+        <ion-title> <span class="maintitle"> Reserve now </span> <span class="subtitle">{{headerdate}}</span></ion-title>
+        <ion-buttons end (click)="notification()">
+                     <button ion-button icon-only>
+                <ion-icon name="notifications-outline"><span class="noti_counter">0</span></ion-icon>
+            </button>
+        </ion-buttons>
+        <ion-buttons end (click)="PopoverModal()">
+                     <button ion-button icon-only>
+                <ion-icon name="more"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content style="background:#f9f9f9;">
+    <div class="mapouter" #map id="map"></div>
+
+    <div class="sortbtn">
+        <button ion-button full (click)="SortdistancepresentModal()"><h1 class="product_title">SORT<span><ion-icon><img src="assets/img/sort_icon.png"></ion-icon></span></h1></button>
+    </div>
+    <div class="list_item">
+        <ion-list no-lines *ngIf="searchedlist?.length>0">
+                  <ion-item *ngFor="let result of searchedlist; let i = index;" (click)="totalnation2Page(result,i)">
+                <div class="thumb"  item-start>
+                    <img [src]="result.image">
+                    <div class="imgblack">
+                        <img src="assets/img/img_b.png">
+                    </div>
+                    <div class="circle">{{i+1}}</div>
+                </div>
+
+                <h2>{{result.category}}</h2>
+                <h4 class="categories_sub">{{result.category_name}}</h4>
+                <p class="type" *ngIf="result.dishes.length>0">Type : 
+                    <button ion-button small class="btn_new" *ngFor="let cusinetype of result.dishes;let i = index" [ngClass]="i%2===0 ? 'Yellow' : 'blue'">{{cusinetype.menu_type}}</button> 
+                </p>
+                <p>End Validity : {{search?.time}}</p>
+<!--                <p>Address : {{result.address}}</p>-->
+                <p>Distance : {{result.distance}} KM</p>
+                
+                <div class="pricer" *ngIf="result.coupon">
+                    <!--    <button ion-button outline color="black" class="btn_new1">-{{result.coupon[0].percentage != "" ? '%' : "€"}}% PRICE RESERVATION</button>-->
+                    <button ion-button outline color="black" class="btn_new1" *ngIf="result.coupon.percentage">-{{result.coupon.percentage}}% DISCOUNT ON PAYMENT
+                    </button>
+                    <button ion-button outline color="black" class="btn_new1" *ngIf="result.coupon.price">-€{{result.coupon.price}} PRICE RESERVATION
+                    </button>
+                    <button ion-button outline color="black" class="btn_new1" *ngIf='result.coupon.res_type == "free"'>FREE RESERVATION</button>
+                </div>
+            </ion-item>
+        </ion-list>
+        <ion-list *ngIf="searchedlist?.length == 0">
+            <p style="text-align: center;">Result not found</p>
+        </ion-list>
+    </div>
+</ion-content>
+<ion-footer>
+    <ion-toolbar>
+        <div class="addbtn">
+            <button ion-button full (click)="FilterpresentModal()">Add Filter</button>
+        </div>
+    </ion-toolbar>
+</ion-footer>

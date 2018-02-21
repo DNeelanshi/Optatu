@@ -1,0 +1,130 @@
+<!--
+  Generated template for the RestaurantsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header>
+    <ion-navbar color="white">
+        <button ion-button menuToggle>
+            <ion-icon name="menus"></ion-icon>
+        </button>
+        <ion-title> <span class="maintitle"> Reserve now </span> <span class="subtitle">{{headerdate}}</span></ion-title>
+        <ion-buttons end (click)="notification()">
+                     <button ion-button icon-only>
+                <ion-icon name="notifications-outline"><span class="noti_counter">0</span></ion-icon>
+            </button>
+        </ion-buttons>
+        <ion-buttons end (click)="PopoverModal()">
+                     <button ion-button icon-only>
+                <ion-icon name="more"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+
+    <ion-toolbar color="yellow">
+        <form [formGroup]="RestaurantForm">
+            <ion-grid class="searchheader">
+                <ion-row>
+                    <ion-col col-12>
+                        <div class="outersearch">
+                            <ion-searchbar placeholder="WHERE (CITY, ADDRESS) " class="abcd" [showCancelButton]="shouldShowCancel" (input)="updateSearch()" formControlName="query">
+                            </ion-searchbar>
+<!--                            <ion-searchbar placeholder="WHERE (CITY, ADDRESS) " [(ngModel)]="autocomplete.query" class="abcd" [showCancelButton]="shouldShowCancel" (input)="updateSearch()" formControlName="query">
+                            </ion-searchbar>-->
+                            <ion-icon class="loc-img"><img src="assets/img/interactive_map.png"></ion-icon>
+                        </div>
+<!--                        <ion-list *ngIf="autocompleteItems != ''" class="suggestion">
+                            <ion-item *ngFor="let item of autocompleteItems" tappable   (click)="chooseItem(item)">{{ item }}</ion-item>
+                        </ion-list>-->
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col col-12>
+                        <ion-input type="text" placeholder="RESTAURANT NAME" class="searchinput" formControlName="restaurantName"></ion-input>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+<!--                    <ion-calendar (click)="openCalendar()" formControlName="date" (onChange)="onChange($event)" [type]="type" [format]="'YYYY-MM-DD'" [options]="optionsBasic"></ion-calendar>-->
+                    <ion-col col-12>
+                        <ion-item>
+                            <ion-icon  item-start class="calender"><img src="assets/img/date_calendar.png"></ion-icon>
+                            <ion-label class="cdate" style="position:static; width:30%">Date</ion-label>
+                            <ion-input type="text" class="sdate clndr" formControlName="date"  [(ngModel)]="autocomplete.date" (click)="openCalendar()"></ion-input>
+                        </ion-item>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                     <ion-col col-6>
+                        <ion-item> 
+                            <ion-icon  item-start class="calender"><img src="assets/img/time.png"></ion-icon>
+                            <ion-label class="cdate" style="position:static; width:30%">Time</ion-label>
+                            <ion-datetime class="customclass5454" displayFormat="HH:mm A" pickerFormat="HH:mm A" formControlName="time"></ion-datetime>
+                        </ion-item>
+                    </ion-col>
+                    <ion-col col-6>
+                        <ion-item>
+                            <ion-icon  item-start class="calender"><img src="assets/img/table.png"></ion-icon>
+                            <ion-label class="cdate">Table Seats</ion-label>
+                            <ion-datetime class="customclass5454" displayFormat="h" pickerFormat="h" formControlName="seats"></ion-datetime>
+<!--                            <ion-select formControlName="seats">
+                                <ion-option *ngFor="let seatl of seatlist">{{seatl.seat}}</ion-option>
+                            </ion-select>-->
+                        </ion-item>
+                    </ion-col>
+                   
+                </ion-row>
+                <ion-row>
+                    <ion-col col-12>
+                        <button full class="btn" (click)="Search(RestaurantForm)">Search</button>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </form>
+    </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content style="background:#f9f9f9;">
+    <div class="list_item">
+        <h2 class="product_title">TOP {{CategoryName}}</h2>
+        <ion-list no-lines>
+            <ion-item *ngFor="let top of restaurants">
+                <div class="thumb"  item-start>
+                    <img [src]="top.image">
+                </div>
+
+                <h2>{{top.category}}</h2>
+                <p class="categories_sub">{{top.category_name}}</p>
+                <p>Distance : {{top.distance}} KM</p>
+                <p>Address : {{top.address}}</p>
+                <p class="type">Type :
+                
+                    <button ion-button small *ngFor="let type of top.dishes;let i = index" class="btn_new" [ngClass]="i%2===0 ? 'Yellow' : 'blue'">{{type.menu_type}}</button> 
+<!--                    <button ion-button small  class="btn_new">Bio</button>-->
+
+                </p>
+                <button ion-button small class="btn_new" (click)="barbequenation(top)">Reserve</button>
+                <button ion-button small class="btn_new" (click)="MaplistfullModal(top)">MAP VIEW</button>
+            </ion-item>
+            <!--  <ion-item>
+                <div class="thumb"  item-start>
+                   <img src="assets/img/r1.jpg">
+                </div>
+                <h2>Barbeque Nation</h2>
+                <p class="categories_sub">RESTAURANTS</p>
+                <p>Distance : 350m</p>
+                <p>Address : Dongi Garadgi, Gaji</p>
+                <p class="type">Type : 
+                  <button ion-button small color="yellow" class="btn_new">Sushi</button> 
+                  <button ion-button small  class="btn_new">Bio</button>
+                </p>
+                <button ion-button small class="btn_new" (click)="barbequenation()">Reserve</button>
+                <button ion-button small class="btn_new" (click)="MaplistfullModal()">MAP VIEW</button>
+            
+              </ion-item>-->
+        </ion-list>
+    </div>
+</ion-content>

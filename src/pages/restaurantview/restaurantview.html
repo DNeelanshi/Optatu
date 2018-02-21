@@ -1,0 +1,102 @@
+<!--
+  Generated template for the RestaurantviewPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-navbar color="white">
+        <button ion-button menuToggle>
+            <ion-icon name="menus"></ion-icon>
+        </button>
+        <ion-title> <span class="maintitle"> Reserve now </span> <span class="subtitle">{{headerdate}}</span></ion-title>
+        <ion-buttons end (click)="notification()">
+                     <button ion-button icon-only>
+                <ion-icon name="notifications-outline"><span class="noti_counter">0</span></ion-icon>
+            </button>
+        </ion-buttons>
+        <ion-buttons end (click)="PopoverModal()">
+                     <button ion-button icon-only>
+                <ion-icon name="more"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <div class="box">
+        <ion-list no-lines>
+            <ion-item>
+                <ion-thumbnail item-start>
+                    <img [src]="resdetail?.image"/>
+                </ion-thumbnail>
+                <h2>{{resdetail?.category}}</h2>
+                <p>{{resdetail?.category_name}}</p>
+            </ion-item>
+        </ion-list> 
+    </div>
+
+    <div class="box2">
+        <ion-grid class="details">
+            <ion-row>
+                <ion-col col-5><h1>address :</h1></ion-col>
+                <ion-col col-7>
+                    <ion-item no-padding><ion-label>{{resdetail?.address}} 
+                            <ion-icon class="arrow"><img src="assets/img/arrow.png"/> </ion-icon>  </ion-label></ion-item>   
+                    <!--          <ion-item no-padding><ion-label>
+                              Portland, Oregon  </ion-label> </ion-item>           -->
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col col-5><h1>tel :</h1></ion-col>
+                <ion-col col-7><ion-item no-padding><ion-label>{{currentuser?.phone}}</ion-label></ion-item></ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col col-5><h1>email :</h1></ion-col>
+                <ion-col col-7><ion-item no-padding><ion-label>{{currentuser?.email}}</ion-label></ion-item></ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col col-5><h1>opening time :</h1></ion-col>
+                <ion-col col-7><ion-item no-padding><ion-label>{{resdetail?.start_date| date:'shortTime'}} to {{resdetail?.end_date| date:'shortTime'}}</ion-label></ion-item></ion-col>
+            </ion-row>
+        </ion-grid>
+    </div>
+
+
+    <div class="box2">
+        <ion-grid class="details">
+            <ion-row>
+                <ion-col col-5><h1>menu type :</h1></ion-col>
+                <ion-col col-7><span *ngFor="let menutype of resdetail?.dishes">{{menutype.menu_type}}</span></ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col col-5><h1>menu price:</h1></ion-col>
+                <ion-col col-7><span>FIXED</span></ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col col-5><h1>location:</h1></ion-col>
+                <ion-col col-7><span>{{resdetail?.location_type}}</span></ion-col>
+            </ion-row>
+        </ion-grid>
+    </div>
+
+    <div class="yellowbox">
+        <div class="outline">
+            <h1>reserve now</h1>
+            <h3>DATE:<span>{{selected_data?.date}}</span></h3>
+            <h3>TABLE SEATS:<span>{{selected_data?.seat}}</span></h3>
+            <div class="pricer" *ngIf="resdetail?.coupon">
+                <h3>VALIDITY FROM:<span>{{resdetail?.coupon.startdate| date:'shortTime'}} to {{resdetail?.coupon.enddate| date:'shortTime'}}</span></h3>
+                <h4 *ngIf='resdetail?.coupon.res_type == "discount"'>-{{resdetail?.coupon.percentage}}%<br><span  class="discount">DISCOUNT ON PAYMENT</span></h4>
+                <h4 *ngIf='resdetail?.coupon.res_type == "price"'>-€{{resdetail?.coupon.price}}<br><span  class="discount">PRICE RESERVATION</span></h4>
+                <span *ngIf='resdetail?.coupon.res_type == "free"' class="discount">FREE RESERVATION</span>
+            </div>
+
+            <button  ion-button round (click)="paymentPage(resdetail)" class="confirm">confirm</button>
+        </div>
+    </div>
+
+</ion-content>

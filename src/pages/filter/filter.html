@@ -1,0 +1,79 @@
+<!--
+  Generated template for the FilterPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<form [formGroup]="FilterForm">
+<ion-header>
+  <ion-navbar color="white">
+    <ion-buttons start left>
+      <button ion-button icon-only (click)="dismiss()">
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title> Filter</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding style="background: #f9f9f9;">
+  <div class="filter_list">
+     <ion-list no-lines>
+    <ion-item>
+      <ion-label>RESERVATION TYPE</ion-label>
+      <ion-select formControlName="reservationType" [(ngModel)]="reservation" (ngModelChange)="reservationSelect($event)" >
+        <ion-option value="discount">DISCOUNT</ion-option>
+        <ion-option value="free">FREE</ion-option>
+        <ion-option value="price">PRICE</ion-option>
+      </ion-select>
+  </ion-item> 
+<!--         <rl-tag-input *ngIf="selectedCat.length>0" [(ngModel)]="selectedCat" [ngModelOptions]="{standalone: true}" (click)="onChange(selectedCat)"></rl-tag-input>-->
+  <div class="tag" *ngIf="reservation">{{reservation}} <span class="tag_delete" (click)="onChange()">x</span></div>
+  <ion-item>
+      <ion-label>Menu Type</ion-label>
+      <ion-select multiple="true" formControlName="menuType" [(ngModel)]="menutype" (ngModelChange)="SelectedMenuType($event)" >
+        <ion-option>ITALIAN</ion-option>
+        <ion-option>SUSHI</ion-option>
+        <ion-option>SALAD</ion-option>
+        <ion-option>THAI</ion-option>
+        <ion-option>SEA FOOD</ion-option>
+        <ion-option>LIQUOR</ion-option>
+      </ion-select>
+  </ion-item>
+  <div *ngIf="menudata?.length>0">
+  <div class="tag" *ngFor="let type of menudata;let i = index">{{type}}<span class="tag_delete" (click)="SelectedMenuTypeDelete(i)">x</span></div>
+<!--  <div class="tag">SUSHI<span class="tag_delete">x</span></div>-->
+  </div>
+  <ion-item>
+      <ion-label>Menu Price</ion-label>
+      <ion-select formControlName="menuPrice" [(ngModel)]="menuprice" (ngModelChange)="SelectedMenuPrice($event)" >
+        <ion-option>0-20</ion-option>
+        <ion-option>20-40</ion-option>
+      </ion-select>
+  </ion-item>
+  
+  
+<!--  <rl-tag-input *ngIf="MenuPrice.length>0" [(ngModel)]="MenuPrice" [ngModelOptions]="{standalone: true}" (click)="MenuPriceDelete(MenuPrice)"></rl-tag-input>-->
+  <div class="tag" *ngIf="menuprice">{{menuprice}} <span class="tag_delete" (click)="MenuPriceDelete()">x</span></div>
+  <ion-item>
+      <ion-label>Location Type</ion-label>
+      <ion-select formControlName="locationType" [(ngModel)]="locationtype" (ngModelChange)="LocationType($event)" >
+        <ion-option>SEA VIEW</ion-option>
+        <ion-option>SCENIC VIEW</ion-option>
+      </ion-select>
+  </ion-item>
+     </ion-list>
+     <div class="tag" *ngIf="locationtype">{{locationtype}}<span class="tag_delete" (click)="locationtypeDelete()">x</span></div>
+  </div>
+    
+</ion-content>
+
+<ion-footer no-lines>
+  <ion-toolbar class="footer_button">
+    <button ion-button block color="dark" type="submit" (click)="FilterAccept(FilterForm)">ADD </button>
+    <button ion-button block color="yellow" type="button" (click)="ResetFilter()">RESET ALL</button>
+  </ion-toolbar>
+</ion-footer>
+    
+</form>

@@ -1,0 +1,58 @@
+<ion-menu [content]="content" [swipeEnabled]="false">
+    <ion-header>
+        <ion-toolbar color="yellow">
+            <ion-list no-lines class="profile_menu" *ngIf="currentuser">
+                <ion-item>
+
+                    <ion-avatar item-start>
+                        <img [src]="userimage">
+                    </ion-avatar>
+                    <h2>{{currentuser?.name}}</h2>
+                    <p>{{currentuser?.email}}</p>
+                </ion-item>
+            </ion-list>
+
+            <ion-list no-lines class="profile_menu" *ngIf="currentuser == null">
+                      <ion-item>
+                    <ion-avatar item-start>
+                        <img src="assets/img/user.jpg">
+                    </ion-avatar>
+                    <h2>Username</h2>
+                    <p>johnlocke@gmail.com</p>
+                </ion-item>
+            </ion-list>
+        </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+        <ion-list no-lines class="sidemenu" *ngIf="currentuser">
+            <button menuClose color="black" ion-item *ngFor="let p of pages" (click)="openPage(p)" [class.active]="checkActivePage(p)">
+                    <ion-icon><img src="{{p.icon}}"></ion-icon>
+                {{p.title}}
+            </button>
+            <button menuClose color="black" ion-item (click)="shareapp()">
+                <ion-icon><img src="assets/img/share.png"></ion-icon>
+                Share This App
+            </button>
+            <button menuClose color="black" ion-item (click)="logout()">
+                    <ion-icon><img src="assets/img/logout.png"></ion-icon>
+                Logout
+            </button>
+        </ion-list>
+
+        <ion-list no-lines class="sidemenu" *ngIf="currentuser == null">
+                  <button menuClose color="black" ion-item *ngFor="let p of pages" (click)="openPage(p)" [class.active]="checkActivePage(p)">
+                <ion-icon><img src="{{p.icon}}"></ion-icon>
+                {{p.title}}
+            </button>
+            <button menuClose color="black" ion-item (click)="shareapp()">
+                <ion-icon><img src="assets/img/share.png"></ion-icon>
+                Share This App
+            </button>
+        </ion-list>
+    </ion-content>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

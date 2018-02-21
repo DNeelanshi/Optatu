@@ -1,0 +1,114 @@
+<!--
+  Generated template for the CreateaccuntPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+
+<ion-header>
+
+  <ion-navbar color="theme-header">
+    <ion-title>Create Account</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <div class="main">
+    <div class="top-sec">
+     <div class="input-main">
+      <div class="main-img">
+        <img [src]="base64Image">
+      </div>
+      <div class="input-sec" (click)="presentActionSheet()">
+      <div class="upld">
+        <ion-icon name="camera"></ion-icon>
+      </div>
+      </div>
+     </div>
+    </div>
+  </div>
+  <div class="content-sec">
+    <div class="form-sec">
+      <form [formGroup]="SignupForm">
+        <ion-list>
+          <ion-grid>
+            <ion-row>
+              <ion-col col-12 style="position: initial;">
+              <ion-item>
+                <ion-input type="text" placeholder="NAME" formControlName="name"></ion-input>
+              </ion-item>
+                  <p *ngIf="!isValid('name')" color="danger" padding-left>Name required.</p>
+            </ion-col>
+
+            <ion-col col-12 style="position: initial;">
+              <ion-item>
+                <ion-input type="text" placeholder="LAST NAME " formControlName="surname"></ion-input>
+              </ion-item>
+                <p *ngIf="!isValid('surname')" color="danger" padding-left>Last name required.</p>
+            </ion-col>
+            <ion-col col-12 style="position: initial;">
+               <ion-item>
+                <ion-input type="tel" placeholder="PHONE NUMBER" formControlName="phone" maxLength="15"></ion-input>
+              </ion-item>
+<!--                <p *ngIf="!isValid('phone')" color="danger" padding-left>Phone should be 10 digits.</p>-->
+            </ion-col>
+            <ion-col col-12 style="position: initial;">
+               <ion-item>
+                <ion-input type="email" placeholder="EMAIL " formControlName="email" autocapitalize="off"></ion-input>
+              </ion-item>
+                <p *ngIf="!isValid('email')" color="danger" padding-left>Invalid email.</p>
+            </ion-col>
+            <ion-col col-12 style="position: initial;">
+                <div class="itemouter">
+               <ion-item>
+                <ion-input type="{{type}}" placeholder="PASSWORD" formControlName="password" class="form-control" id="password" name="password" (input)="pass_strength(SignupForm.controls.password)" maxLength="15"></ion-input>
+               </ion-item>
+                    <button type="button" color="dark" class="eyebutton" (click)="showPassword()" ion-button icon-only clear>
+                    <ion-icon name="{{iconname}}"></ion-icon>
+                  </button>
+                <div id="strength">
+                    <p class="strnth">Password strength:</p>
+                        <ul id="strengthBar">
+                            <li class="point" [style.background-color]="bar0"></li>
+                            <li class="point" [style.background-color]="bar1"></li>
+                            <li class="point" [style.background-color]="bar2"></li>
+                            <li class="point" [style.background-color]="bar3"></li>
+                            <li class="point" [style.background-color]="bar4"></li>
+                        </ul>
+                    </div>
+                </div>
+            </ion-col>
+
+              <ion-col col-12 style="position: initial;">
+                  <div class="itemouter">
+               <ion-item>
+                <ion-input type="{{Ctype}}" placeholder="CONFIRM PASSWORD" formControlName="cpassword"></ion-input>
+                   </ion-item>
+                    <button type="button" color="dark" class="eyebutton" (click)="showCPassword()" ion-button icon-only clear>
+  <ion-icon name="{{iconname1}}"></ion-icon>
+</button>
+                <div class='form-text error' color="danger" *ngIf="SignupForm.controls.cpassword.touched">
+          <div *ngIf="SignupForm.hasError('mismatchedPasswords')">Passwords do not match.</div>
+        </div>
+                </div>
+                  </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-list>
+                <ion-item class="rbtn" style="background:none">
+                <ion-label>LEGAL DISCLAIMER</ion-label>
+                <ion-checkbox color="dark" formControlName="legal"></ion-checkbox>
+              </ion-item>
+          <!--<p *ngIf="!isValid('legal')" danger padding-left>Must accept legal disclaimer</p>-->
+           <div class="btn-sec">
+               
+    <button type="submit" ion-button (click)="CreateAccount(SignupForm)" [disabled]="!SignupForm.valid">REGISTER</button>
+  </div>
+      </form>
+      
+    </div>
+  </div>
+</ion-content>

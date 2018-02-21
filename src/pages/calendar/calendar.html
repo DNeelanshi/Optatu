@@ -1,0 +1,32 @@
+<ion-header class="header-bg" hidden>
+
+  <ion-navbar hideBackButton color="yellow">
+   <button  class="backbtn" (click)="backtoprocess()">
+            <ion-icon class="customIcon" name="arrow-back"></ion-icon></button>
+    <ion-title>Calendar</ion-title>
+     </ion-navbar>
+</ion-header>
+<ion-content class="prfl">
+    <form [formGroup]="CalendarForm">
+    <ion-calendar color="yellow" class="clndr" name="date" formControlName="date" (onChange)="onChange($event,CalendarForm)" [type]="date" [format]="'MM-DD-YYYY'">
+</ion-calendar> 
+<!--
+<ion-grid no-padding>
+  <ion-row>
+    <ion-col col-12>
+        <div class="cal-txt" *ngFor="let not of notedisplayed">
+      <div class="cal-txt1">
+        <p>{{not.note}}</p>
+      </div>
+        <div class="icon_crss">
+             <ion-icon name="close" (click)="delete(not._id)"></ion-icon>
+      </div>
+        </div>
+    </ion-col>
+    
+  </ion-row>
+
+</ion-grid>-->
+    </form>
+</ion-content>
+

@@ -1,0 +1,46 @@
+<!--
+  Generated template for the SettingPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+
+     <ion-toolbar color="white">
+    <button ion-button menuToggle>
+      <ion-icon name="menus"></ion-icon>
+    </button>
+    <ion-title>SETTINGS</ion-title>
+     </ion-toolbar>
+ 
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+
+  <ion-item>
+    <ion-label>NOTIFICATION</ion-label>
+    <ion-toggle color="secondary" [(ngModel)]="pepperoni"></ion-toggle>
+  </ion-item>
+
+  <ion-item (click)="edit()">
+    <ion-label>CHANGE PROFILE DETAILS</ion-label>
+    <ion-avatar item-end>
+      <img src="assets/img/user.jpg">
+    </ion-avatar>
+  </ion-item>
+  <ion-item (click)="changepassword()">
+    <ion-label>CHANGE PASSWORD</ion-label>
+    <ion-avatar item-end>
+      <img src="assets/img/change_password.png">
+    </ion-avatar>
+  </ion-item>
+
+
+
+</ion-list>
+
+</ion-content>
